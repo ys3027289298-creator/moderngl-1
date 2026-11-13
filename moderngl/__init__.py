@@ -1987,6 +1987,23 @@ class Context:
         res.extra = None
         return res
 
+    def texture_avif(self, source, mipmap=True, max_threads=None):
+        """Create a 2D texture from an AVIF image.
+
+        Args:
+            source: A file path or a bytes-like object with the AVIF data.
+            mipmap (bool): Generate and upload the full mip chain.
+            max_threads (int): Decoder thread limit, defaults to all cores.
+
+        8-bit images become ``dtype="f1"`` textures, 10-bit images become
+        ``dtype="f2"`` (half float) textures, with 3 or 4 components
+        depending on the presence of an alpha channel. Unsupported
+        profiles raise :class:`moderngl.avif.AvifUnsupportedError`.
+        """
+        from moderngl.avif import texture_from_avif
+
+        return texture_from_avif(self, source, mipmap=mipmap, max_threads=max_threads)
+
     def texture_array(self, size, components, data=None, alignment=1, dtype="f1"):
         res = TextureArray.__new__(TextureArray)
         res.mglo, res._glo = self.mglo.texture_array(

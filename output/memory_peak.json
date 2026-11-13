@@ -1,0 +1,114 @@
+[
+  {
+    "case": "4K_8bit_rgba_moderngl",
+    "quality": 90,
+    "file_bytes": 4578958,
+    "decoded_bytes": 33177600,
+    "gl_chain_bytes": 44236220,
+    "baseline_rss": 94679040,
+    "baseline_hwm": 94674944,
+    "peak_hwm": 266919936,
+    "peak_delta": 172244992,
+    "rss_after_release": [
+      172797952,
+      172793856,
+      172797952
+    ]
+  },
+  {
+    "case": "4K_8bit_rgba_naive",
+    "quality": 90,
+    "file_bytes": 4578958,
+    "decoded_bytes": 33177600,
+    "gl_chain_bytes": 44236220,
+    "baseline_rss": 94699520,
+    "baseline_hwm": 94695424,
+    "peak_hwm": 264163328,
+    "peak_delta": 169467904,
+    "rss_after_release": [
+      162312192,
+      162312192,
+      162312192
+    ]
+  },
+  {
+    "case": "4K_10bit_rgba_moderngl",
+    "quality": 90,
+    "file_bytes": 7344224,
+    "decoded_bytes": 66355200,
+    "gl_chain_bytes": 88472440,
+    "baseline_rss": 94691328,
+    "baseline_hwm": 94691328,
+    "peak_hwm": 455782400,
+    "peak_delta": 361091072,
+    "rss_after_release": [
+      217198592,
+      217198592,
+      217198592
+    ]
+  },
+  {
+    "case": "8K_8bit_rgba_moderngl",
+    "quality": 90,
+    "file_bytes": 18255785,
+    "decoded_bytes": 132710400,
+    "gl_chain_bytes": 176946620,
+    "baseline_rss": 94515200,
+    "baseline_hwm": 94511104,
+    "peak_hwm": 704659456,
+    "peak_delta": 610148352,
+    "rss_after_release": [
+      305508352,
+      305508352,
+      305508352
+    ]
+  },
+  {
+    "case": "8K_8bit_rgba_naive",
+    "quality": 90,
+    "file_bytes": 18255785,
+    "decoded_bytes": 132710400,
+    "gl_chain_bytes": 176946620,
+    "baseline_rss": 94670848,
+    "baseline_hwm": 94666752,
+    "peak_hwm": 696397824,
+    "peak_delta": 601731072,
+    "rss_after_release": [
+      294887424,
+      294887424,
+      294887424
+    ]
+  },
+  {
+    "case": "8K_10bit_rgba_moderngl",
+    "quality": 90,
+    "file_bytes": 29351767,
+    "decoded_bytes": 265420800,
+    "gl_chain_bytes": 353893240,
+    "baseline_rss": 94732288,
+    "baseline_hwm": 94728192,
+    "peak_hwm": 1458286592,
+    "peak_delta": 1363558400,
+    "rss_after_release": [
+      482586624,
+      482590720,
+      482590720
+    ]
+  },
+  {
+    "case": "8K_8bit_rgba_moderngl_q30",
+    "quality": 30,
+    "file_bytes": 19107,
+    "decoded_bytes": 132710400,
+    "gl_chain_bytes": 176946620,
+    "baseline_rss": 94687232,
+    "baseline_hwm": 94687232,
+    "peak_hwm": 685223936,
+    "peak_delta": 590536704,
+    "rss_after_release": [
+      305524736,
+      305524736,
+      305524736
+    ]
+  }
+]

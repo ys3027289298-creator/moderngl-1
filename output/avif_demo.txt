@@ -1,0 +1,51 @@
+
+================================================================
+  [1/5] 解码识别: 8/10 位与 alpha 检测
+================================================================
+  4K_8bit_rgba_q90.avif: 3840x2160 depth=8bit alpha=True -> components=4 dtype=f1
+  4K_10bit_rgba_q90.avif: 3840x2160 depth=10bit alpha=True -> components=4 dtype=f2
+
+================================================================
+  [2/5] 纹理创建与 mip 链逐级上传
+================================================================
+  texture: size=(3840, 2160) components=4 dtype=f1
+  mip level  0: 3840x2160 uploaded, read back 33177600 bytes
+  mip level  1: 1920x1080 uploaded, read back 8294400 bytes
+  mip level  2: 960x540 uploaded, read back 2073600 bytes
+  mip level  3: 480x270 uploaded, read back 518400 bytes
+  mip level  4: 240x135 uploaded, read back 129600 bytes
+  mip level  5: 120x67 uploaded, read back 32160 bytes
+  mip level  6: 60x33 uploaded, read back 7920 bytes
+  mip level  7: 30x16 uploaded, read back 1920 bytes
+  mip level  8: 15x8 uploaded, read back 480 bytes
+  mip level  9: 7x4 uploaded, read back 112 bytes
+  mip level 10: 3x2 uploaded, read back 24 bytes
+  mip level 11: 1x1 uploaded, read back 4 bytes
+
+================================================================
+  [3/5] 不支持的 profile 明确报错
+================================================================
+  12-bit AVIF -> AvifUnsupportedError: unsupported AVIF bit depth: 12 (only 8-bit and 10-bit are supported)
+  corrupt file -> AvifError: failed to decode AVIF /home/ys/feedback/uidreczz28ZEpuV6aAn/output/fixtures/corrupt.avif: BMFF parsing failed
+
+================================================================
+  [4/5] 上传失败回收: 不留半成品纹理
+================================================================
+  upload failed as simulated: simulated upload failure
+  textures created before failure: 1
+  released (InvalidObject): True
+
+================================================================
+  [5/5] 4K/8K 内存峰值 (详见 output/memory_peak.md)
+================================================================
+  | case | file | decoded | GL mip chain | peak delta | RSS after repeated release |
+  |---|---|---|---|---|---|---|
+  | 4K_8bit_rgba_moderngl | 4.4 MiB | 31.6 MiB | 42.2 MiB | 164.3 MiB | 165/165/165 MiB |
+  | 4K_8bit_rgba_naive | 4.4 MiB | 31.6 MiB | 42.2 MiB | 161.6 MiB | 155/155/155 MiB |
+  | 4K_10bit_rgba_moderngl | 7.0 MiB | 63.3 MiB | 84.4 MiB | 344.4 MiB | 207/207/207 MiB |
+  | 8K_8bit_rgba_moderngl | 17.4 MiB | 126.6 MiB | 168.7 MiB | 581.9 MiB | 291/291/291 MiB |
+  | 8K_8bit_rgba_naive | 17.4 MiB | 126.6 MiB | 168.7 MiB | 573.9 MiB | 281/281/281 MiB |
+  | 8K_10bit_rgba_moderngl | 28.0 MiB | 253.1 MiB | 337.5 MiB | 1300.4 MiB | 460/460/460 MiB |
+  | 8K_8bit_rgba_moderngl_q30 | 0.0 MiB | 126.6 MiB | 168.7 MiB | 563.2 MiB | 291/291/291 MiB |
+
+demo done.
